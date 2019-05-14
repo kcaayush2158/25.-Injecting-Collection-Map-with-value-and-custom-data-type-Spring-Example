@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="companyinfo" class="model.CompanyInfo">
+        <property name="empIdandNameMap">
+            <map>
+                <entry key="101" value="skdjsd"/>
+                <entry key="102" value="aayush"/>
+            </map>
+
+        </property>
+        <property name="studentIdMap">
+            <map>
+                <entry key="1111" value-ref="students"/>
+                <entry key="2222" value-ref="students2"/>
+            </map>
+        </property>
+
+    </bean>
+
+    <bean id="students" class="model.Student">
+        <property name="studentId" value="101"/>
+        <property name="studentName" value="aayushkc"/>
+        <property name="rollno" value="102"/>
+        <property name="studentAddress" value="gaushala"/>
+    </bean>
+
+    <bean id="students2" class="model.Student">
+        <property name="studentId" value="102"/>
+        <property name="studentName" value="avishek paudel"/>
+        <property name="rollno" value="103"/>
+        <property name="studentAddress" value="naxal"/>
+    </bean>
+
+</beans>
